@@ -1,0 +1,13 @@
+body{
+    background-image: url(https://img.freepik.com/free-vector/floral-background-hand-drawn-style_52683-60347.jpg?w=2000);
+    background-size: cover;
+}
+
+.painel{
+    width: 500px;
+    height: 500px;
+    background-color: rgba(184, 141, 85, 0.404);
+    border-radius: 10px;
+    padding-left: 40px;
+    margin: auto;
+}

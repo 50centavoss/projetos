@@ -1,0 +1,59 @@
+.fundo{
+ width: 100%;
+ height: calc(600px - 6px);
+ border-bottom: 6px solid orange;
+ overflow: hidden;
+ background-position: cover;
+ position: relative;
+ background-attachment: fixed;
+ background-image: url(https://images2.alphacoders.com/238/238870.jpg
+ );
+
+}
+
+.aviao{
+    width: 350px;
+    position: absolute;
+    right: -10px;
+    top: 100px
+}
+.card:hover{
+   width: 20rem !important;
+   transition: 620ms;
+
+}
+.card{
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+.carousel{
+    box-shadow: 2px 2px 20px black;
+}
+.rodape{
+    color: white;
+    padding-top: 30px;
+    border-top:  5px solid orange;
+    padding-bottom: 30px;
+}
+
+a{
+    color: white !important;
+}
+.img-fluid {
+    box-shadow: 2px 2px 20px black;
+    margin-top: 20px ;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    transition: 1s;
+}
+.img-fluid:hover{
+    filter: grayscale(100%);
+    transition: 2s;
+
+}
+.informacao{
+    margin-top: 30px;
+}
+.preco{
+    font-size: 20px !important;
+}

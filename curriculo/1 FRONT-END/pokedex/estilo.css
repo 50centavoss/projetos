@@ -1,0 +1,54 @@
+.body{
+    background-color: black;
+    text-align: center;
+}
+
+.quadrado{
+    border-radius: 200% solid black;
+    border: 5px;
+}
+.letras{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: aliceblue;
+
+}
+#tela{
+    color: aliceblue;
+    border: 15px solid rgb(43, 39, 39);
+    width:600px;
+    height: 500px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-image: url(https://img.freepik.com/vetores-premium/bela-paisagem-pixel-art-arvore-na-colina-vista-panoramica-sprite-de-8-bits_418367-292.jpg?w=2000);
+    background-size: cover;
+    animation: carregar 10s alternate;
+    justify-content: center;
+    margin: auto;
+    
+}
+.botao{
+    background-color: rgba(255, 0, 0, 0.795);
+    width: 157px;
+    
+}
+.botao1{
+    background-color: blue;
+    width: 180px;
+}
+.botao2{
+    background-color: yellow;
+    width: 159px;
+}
+.h1{
+    color: azure;
+}
+.pokemon{
+   
+    width: 180px;
+    border-radius: 15px;
+}
+.pokemon1{
+  
+    width: 290px;
+    border-radius: 15px;
+}

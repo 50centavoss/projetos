@@ -1,0 +1,23 @@
+.atrás{
+    background-color: rgb(141, 55, 55);
+}
+
+.botao{
+    border-radius: 18px;
+    background-color: rgb(155, 170, 132);
+}
+.painel{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgb(112, 126, 126);
+    margin-left: auto ;
+    text-align: center;
+    margin-right: auto;
+
+    
+}
+.barra{
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}

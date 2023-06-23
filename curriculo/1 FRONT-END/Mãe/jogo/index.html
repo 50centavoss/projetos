@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo da velha</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="esquerda">
+        <button class="botao" onclick="gerarbatalha()">Gerar Batalha</button>
+        <span class="jogador1" id="jogador1"></span>
+        <span class="vs">vs</span>
+        <span class="jogador2" id="jogador2"></span>
+        <table class="jogo" border="2">
+
+            <tr>
+                <td id="f1" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f2" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f3" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+            <tr>
+                <td id="f4" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f5" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f6" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+            <tr>
+                <td id="f7" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f8" class="quadrado" onclick="jogar(this)"></td>
+                <td id="f9" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+        </div>
+           
+        </table>
+
+        <button class="direuta" onclick="reiniciar()">Reiniciar</button>
+    </div>
+
+    <div>
+        <label for="">Nome:</label>
+        <input type="text" id="nome">
+
+        <button class="botao" onclick="adicionar()">Adiconar</button>
+
+            <ul id="lista">
+
+                
+            </ul>
+    </div>
+</body>
+
+</html>

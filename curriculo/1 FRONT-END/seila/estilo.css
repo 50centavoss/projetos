@@ -1,0 +1,53 @@
+ 
+.foto{
+    max-width: 200px;
+    border: 10px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    width: 200px;
+}
+
+body {
+   background-image:linear-gradient(to top,rgb(116, 109, 116), rgba(41, 92, 95, 0));
+   text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.menu {
+   background-color:  rgba(54, 8, 8, 0.377);
+   border-radius: 15px
+
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a{
+    color:rgb(0, 0, 0);
+    padding:15px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu ul li a:hover{
+     background-color: rgb(105, 61, 61);
+     font-size: 20px;
+     border-radius: 20px;
+     transition-duration:500ms;
+}
+
+.tabela {
+    background-color: rgb(0, 47, 255);
+    color: rgb(158, 42, 42);
+    font-family:monospace;
+}
+.tabela tr td:hover{
+    font-size: 20px;
+    color:rgb(131, 99, 77)
+}
+
+                               
