@@ -14,7 +14,7 @@ var bolaY = canvas.height - 20;
 var bolaDX = 5;
 var bolaDY = -3;
 
-var tijolosPorLinha = 3;
+var tijolosPorLinha = 5;
 var tijolosPorColuna = 6;
 var tijoloLargura = 75;
 var tijoloAltura = 20;
@@ -22,6 +22,9 @@ var tijoloEspacamento = 10;
 var espacamentoSuperiorQuadro = 30;
 var espacamentoEsquerdoQuadro = 30;
 var tijolos = []; //lista com os tijolos
+
+var totalPontuaçao = tijolosPorLinha * tijolosPorColuna * 10;
+var pontuaçao = 0;
 
 //dedicado apena a inicialização dos tijolos
 for (var coluna = 0; coluna < tijolosPorColuna; coluna++) {
@@ -38,6 +41,7 @@ for (var coluna = 0; coluna < tijolosPorColuna; coluna++) {
 
 var setaDireita = false;
 var setaEsquerda = false;
+
 
 document.addEventListener("keydown", descerDaTecla);
 document.addEventListener("keyup", subirDaTecla);
@@ -110,12 +114,19 @@ function detectarColisao() {
 
             if (tijolo.ativo === 1){
 
-                if (bolaX > tijolo.x
-                    && bolaX < tijolo.x + tijoloLargura
-                    && bolaY > tijolo.y
-                    && bolaY < tijolo.y + tijoloAltura) {
+                if (bolaX + bolaRadius > tijolo.x
+                    && bolaX - bolaRadius < tijolo.x + tijoloLargura
+                    && bolaY + bolaRadius > tijolo.y
+                    && bolaY - bolaRadius < tijolo.y + tijoloAltura) {
                     bolaDY = -bolaDY;
                     tijolo.ativo = 0;
+                    tela = document.getElementById("ponto");
+                    pontuaçao = pontuaçao + 10;
+                    tela.innerHTML = "Score" + pontuaçao;
+
+                    if(pontuaçao === totalPontuaçao){
+                        window.location.reload();
+                    }
 
                 }
             }
@@ -124,7 +135,15 @@ function detectarColisao() {
     }
 }
 
+ 
+function gameover(){
+    var gameover = document.getElementById("gameover");
+    gameover.style.display = "block";
+}
 
+function reiniciar(){
+    document.location.reload();
+}
 
 
 
@@ -146,7 +165,7 @@ function desenhar() {
 
         bolaDY = -bolaDY; //inverte colisao ao bater em cima
 
-    } else if (bolaY + bolaDY > canvas.height - bolaRadius) {
+    } else if (bolaY + bolaDY > canvas.height - bolaRadius - raqueteAltura) {
 
         //se for maior que o começo da raquete e menor que o final da raquete
         if (bolaX > raqueteX && bolaX < raqueteX + raqueteLargura) {
@@ -154,7 +173,7 @@ function desenhar() {
             bolaDY = -bolaDY;           //inverte direção
         } else {
 
-            document.location.reload(); //reinicia
+            gameover(); //reinicia
         }
     }
 
